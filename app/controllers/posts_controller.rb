@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!
   respond_to :html, :json, :xml
   before_filter :load_post
 
